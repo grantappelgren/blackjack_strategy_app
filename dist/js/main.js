@@ -3,8 +3,6 @@ var yourSum = 0;
 
 var playerCards = [];
 
-var yourAceCount = 0;
-
 var deck;
 
 var playerCard;
@@ -79,7 +77,6 @@ function startGameSingleDeck() {
     let playerCard = deck.pop();
     cardImg.src = "./img/" + playerCard + ".png";
     yourSum += getValue(playerCard);
-    yourAceCount += checkAce(playerCard);
     document.getElementById("playerCards").append(cardImg);
     playerCards.push(playerCard[0]);
   }
@@ -1912,13 +1909,6 @@ function getValue(card) {
   return parseInt(value);
 }
 
-function checkAce(card) {
-  if (card[0] == "A") {
-    return 1;
-  }
-  return 0;
-}
-
 function startGameMultiDeck() {
   document
     .getElementById("responseResultMulti__icon")
@@ -1950,7 +1940,6 @@ function startGameMultiDeck() {
     let playerCard = deck[Math.floor(Math.random() * deck.length)];
     cardImg.src = "./img/" + playerCard + ".png";
     yourSum += getValue(playerCard);
-    yourAceCount += checkAce(playerCard);
     document.getElementById("playerCards").append(cardImg);
     playerCards.push(playerCard[0]);
   }
@@ -2461,7 +2450,7 @@ function standMultiDeck() {
 
   function incorrectResponseResultMulti() {
     document
-      .getElementById("responseResulMulti__icon")
+      .getElementById("responseResultMulti__icon")
       .append(responseResultIncorrectImg);
   }
 
