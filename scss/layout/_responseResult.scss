@@ -1,0 +1,35 @@
+.responseResult__icon img,
+.responseResultMulti__icon img {
+  width: 10%;
+  display: block;
+  align-content: center;
+  margin: 0px auto 0px;
+  @include mqh(896px) {
+    margin-top: 5px;
+  }
+  @include mqh(1024px) {
+    width: 10%;
+    margin-top: 0px;
+  }
+  @include mqh(1180px) {
+    width: 10%;
+  }
+  @include mq(1280px) {
+    width: 10%;
+  }
+}
+
+.responseResult__explanation {
+  font-size: 14px;
+  text-align: center;
+  margin: 0px 15px 0px;
+  @include mqh(640px) {
+    font-size: 12px;
+  }
+  @include mqh(720px) {
+    font-size: 16px;
+  }
+  @include mq(1920px) {
+    font-size: 20px;
+  }
+}

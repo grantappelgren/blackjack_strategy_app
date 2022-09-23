@@ -1,0 +1,90 @@
+h2 {
+  font-family: brightDemo, serif;
+  font-size: 30px;
+  text-align: center;
+  @include mqh(720px) {
+    font-size: 40px;
+  }
+  @include mqh(780px) {
+    font-size: 30px;
+  }
+  @include mqh(844px) {
+    font-size: 40px;
+  }
+  @include mq(1280px) {
+    font-size: 30px;
+  }
+  @include mq(1400px) {
+    font-size: 40px;
+  }
+}
+
+.activeHand__dealerHeader {
+  margin-bottom: 10px;
+}
+
+.activeHand__playerHeader {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.dealerCard img,
+.playerCards img {
+  width: 100%;
+  max-width: 80px;
+  @include mqh(720px) {
+    max-width: 120px;
+  }
+  @include mqh(780px) {
+    max-width: 110px;
+  }
+  @include mqh(800px) {
+    max-width: 120px;
+  }
+  @include mqh(873px) {
+    max-width: 130px;
+  }
+  @include mqh(896px) {
+    max-width: 130px;
+  }
+  @include mq(768px) {
+    max-width: 150px;
+  }
+  @include mq(800px) {
+    max-width: 150px;
+  }
+  @include mq(810px) {
+    max-width: 150px;
+  }
+  @include mq(1280px) {
+    max-width: 95px;
+  }
+  @include mq(1366px) {
+    max-width: 100px;
+  }
+  @include mq(1440px) {
+    max-width: 130px;
+  }
+  @include mq(1536px) {
+    max-width: 125px;
+  }
+  @include mq(1600px) {
+    max-width: 135px;
+  }
+  @include mq(1920px) {
+    max-width: 175px;
+  }
+}
+
+.containerDealer {
+  @include flexCenter;
+  width: 100%;
+  margin: auto;
+  margin-bottom: 35px;
+}
+
+.containerPlayer {
+  @include flexCenter;
+  width: 100%;
+  margin: auto;
+}

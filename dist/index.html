@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Black Jack Strategy App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Prompt&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="css/main.min.css" />
+    <script src="js/main.js" type="module"></script>
+  </head>
+  <body>
+    <main>
+      <h1 class="offscreen">Black Jack Strategy App</h1>
+      <section id="gameTypeButtons" class="gameTypeButtons">
+        <button
+          id="singleDeck"
+          class="singleDeck gameButton"
+          title="Single-Deck Game"
+          aria-label="Play Single-Deck Game"
+        >
+          Single-Deck
+        </button>
+        <button
+          id="multiDeck"
+          class="multiDeck gameButton"
+          title="Multi-Deck Game"
+          aria-label="Play Multi-Deck Game"
+        >
+          Multi-Deck
+        </button>
+      </section>
+      <a href="#activeHand" class="skip-link">Skip to Active Hand</a>
+      <section
+        id="activeHand"
+        class="activeHand"
+        role="currentState"
+        aria-labelledby="activeHand"
+      >
+        <div class="activeContainer">
+          <div id="activeHand__dealerHeader" class="activeHand__dealerHeader">
+            <h2>DEALER</h2>
+          </div>
+
+          <div class="containerDealer">
+            <div id="dealerCard" class="dealerCard"></div>
+          </div>
+
+          <div class="containerPlayer">
+            <div id="playerCards" class="playerCards"></div>
+          </div>
+
+          <div id="activeHand__playerHeader" class="activeHand__playerHeader">
+            <h2>YOU</h2>
+          </div>
+        </div>
+      </section>
+      <a href="#responseResult" class="skip-link">Skip to Response Result</a>
+      <hr />
+      <section
+        id="responseResult"
+        class="responseResult"
+        role="resultDescription"
+        aria-labelledby="responseResult"
+      >
+        <h2 id="responseResult__title" class="responseResult__title offscreen">
+          Response Result
+        </h2>
+        <div>
+          <div id="responseResult__icon" class="responseResult__icon"></div>
+          <div
+            id="responseResultMulti__icon"
+            class="responseResultMulti__icon"
+          ></div>
+        </div>
+        <p
+          id="responseResult__explanation"
+          class="responseResult__explanation"
+        ></p>
+      </section>
+      <nav id="responseButtons" class="responseButtons">
+        <button
+          id="hit"
+          class="navButton"
+          title="Hit"
+          aria-label="Choose to hit on your current hand"
+        >
+          <p>HIT</p>
+          <img src="img/hit.png" alt="Hit Icon" class="icon hitIcon" />
+        </button>
+        <button
+          id="stand"
+          class="navButton"
+          title="Stand"
+          aria-label="Choose to stand on your current hand"
+        >
+          <p>STAND</p>
+          <img src="img/stand.png" alt="Stand Icon" class="icon" />
+        </button>
+        <button
+          id="double"
+          class="navButton"
+          title="Double"
+          aria-label="Choose to double on your current hand"
+        >
+          <p>DOUBLE</p>
+          <img src="img/double.png" alt="Double Icon" class="icon" />
+        </button>
+        <button
+          id="split"
+          class="navButton"
+          title="Split"
+          aria-label="Choose to split on your current hand"
+        >
+          <p>SPLIT</p>
+          <img src="img/split.png" alt="Split Icon" class="icon" />
+        </button>
+        <button id="newHand__button" class="newHand__button">
+          <p>NEW HAND</p>
+        </button>
+        <button id="newHandMulti__button" class="newHandMulti__button">
+          <p>NEW HAND</p>
+        </button>
+      </nav>
+      <p id="confirmation" class="offscreen" aria-live="assertive"></p>
+    </main>
+  </body>
+</html>

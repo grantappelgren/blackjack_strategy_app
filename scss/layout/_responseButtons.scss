@@ -1,0 +1,41 @@
+nav {
+  @include flexCenter;
+  position: fixed;
+  bottom: 0;
+  @include mqh(601px) {
+    max-height: 80px;
+  }
+  @include mqh(640px) {
+    max-height: none;
+  }
+  @include mq(1024px) {
+    max-height: 80px;
+  }
+  @include mq(1280px) {
+    max-height: 200px;
+    max-width: 500px;
+  }
+}
+
+.icon {
+  @include flexCenter;
+  width: 50%;
+  max-width: 175px;
+  text-align: center;
+  margin: auto;
+  @include mqh(601px) {
+    max-width: 90px;
+  }
+  @include mqh(640px) {
+    max-width: none;
+  }
+  @include mq(1024px) {
+    max-width: 95px;
+  }
+  @include mq(1280px) {
+    max-width: 100px;
+  }
+  @include mq(1280px) {
+    max-width: 150px;
+  }
+}

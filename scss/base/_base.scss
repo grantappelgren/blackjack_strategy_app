@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: brightDemo;
+  src: url("../fonts/BrightDEMO.otf");
+}
+
+html {
+  background-image: linear-gradient(180deg, #15603d, #405133, #405133);
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-size: 12px;
+  font-family: "Prompt", sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: $font-color;
+  @include mqh(720px) {
+    font-size: 13px;
+  }
+  @include mq(768px) {
+    font-size: 18px;
+  }
+  @include mq(1280px) {
+    font-size: 16px;
+  }
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  @include flexCenter;
+  flex-direction: column;
+  padding: 0.5rem;
+}
+
+main {
+  width: 100%;
+  max-height: 1080px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  color: $font-color;
+  align-items: center;
+}
+
+hr {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+  border: 1px solid $bordercolor;
+  @include mq(360px) {
+    margin-top: 13px;
+  }
+  @include mq(390px) {
+    margin-top: 15px;
+  }
+  @include mq(1024px) {
+    margin-top: 5px;
+    width: 30%;
+  }
+  @include mq(1280px) {
+    width: 30%;
+  }
+  @include mq(1440px) {
+    margin-top: 15px;
+  }
+  @include mq(1536px) {
+    margin-top: 20px;
+  }
+  @include mq(1600px) {
+    margin-top: 10px;
+  }
+  @include mq(1920px) {
+    margin-top: 40px;
+    margin-bottom: 15px;
+  }
+  @include mqh(1080px) {
+    margin-top: 5px;
+  }
+  @include mqh(1024px) {
+    margin-top: 40px;
+    margin-bottom: 30px;
+  }
+}
+
+.none {
+  display: none;
+}
+
+.block {
+  display: block;
+}

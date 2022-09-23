@@ -1,0 +1,13 @@
+.gameTypeButtons {
+  @include flexCenter;
+  margin-top: 30px;
+  @include mqh(844px) {
+    margin-top: 50px;
+  }
+  @include mqh(1024px) {
+    margin-top: 30px;
+  }
+  @include mq(1280px) {
+    margin-top: 0px;
+  }
+}
